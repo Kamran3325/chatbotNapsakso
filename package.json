@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0"
+  },
+  "name": "bosyapma",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.cjs",
+    "tailwind:init": "node ./node_modules/tailwindcss/dist/cli.js init",
+    "tailwind:build": "node ./node_modules/tailwindcss/dist/cli.js -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+  "description": ""
+}
