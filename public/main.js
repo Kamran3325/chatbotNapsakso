@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!username) return;
 
-    const socket = io('http://localhost:3000');
+    const socket = io('https://seidnapsakso.onrender.com');
 
     const dom = {
         userList: document.getElementById('user-list'),
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData();
         formData.append('image', file);
         try {
-            const res = await fetch('http://localhost:3000/upload', { method: 'POST', body: formData });
+            const res = await fetch('https://seidnapsakso.onrender.com/upload', { method: 'POST', body: formData });
             if (!res.ok) throw new Error('Yükləmə xətası');
             const { secure_url } = await res.json();
             socket.emit('yeni-mesaj', { type: 'image', content: secure_url, replyTo: state.replyingTo });
